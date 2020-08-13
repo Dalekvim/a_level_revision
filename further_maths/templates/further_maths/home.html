@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block sidebar_heading %}{{ sidebar_heading }}{% endblock %}
+{% block sidebar %}
+<ul>
+  <li>Proof</li>
+  <li>Complex numbers</li>
+  <li>Matrices</li>
+  <li>Further Algebra and Functions</li>
+  <li>Further Calculus</li>
+  <li>Further Vectors</li>
+  <li>Polar coordinates</li>
+  <li>Hyperbolic functions</li>
+  <li>Differential equations</li>
+  <li>Trigonometry</li>
+  <li>Numerical Methods</li>
+</ul>
+<h4>Optional (You have to pick Two, <a href="https://www.aqa.org.uk/subjects/mathematics/as-and-a-level/further-mathematics-7367/specification-at-a-glance">Apparently</a>)</h4>
+<ul>
+  <li>Mechanics</li>
+  <ul>
+    <li>Quantities and units in mechanics</li>
+    <li>Kinematics</li>
+    <li>Forces and Newton’s laws</li>
+    <li>Moments</li>
+  </ul>
+  <li>Statistics</li>
+  <ul>
+    <li>Statistical sampling</li>
+    <li>Data presentation and interpretation</li>
+    <li>Probability</li>
+    <li>Statistical distributions</li>
+    <li>Statistical hypothesis testing</li>
+  </ul>
+  <li>Discrete</li>
+</ul>
+{% endblock %}
+
+{% block heading %}{{ heading }}{% endblock %}
+{% block content %}
+Content
+{% endblock %}
