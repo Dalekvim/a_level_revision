@@ -8,10 +8,10 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - run: 
-          name: "echo an env var that is part of our project"
-          command: |
-            echo $SECRET_KEY # this env var must be swt within the project
+#      - run: 
+#          name: "echo an env var that is part of our project"
+#          command: |
+#            echo $SECRET_KEY # this env var must be swt within the project
       - python/load-cache
       - python/install-deps
       - python/save-cache
