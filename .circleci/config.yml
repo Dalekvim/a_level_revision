@@ -13,8 +13,7 @@ jobs:
       - python/save-cache
       - run:
           command: |
-            env/Scripts/activate
-            ./manage.py test
+            python manage.py test
           name: Test
 
 workflows:
