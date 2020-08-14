@@ -13,7 +13,7 @@ jobs:
       - python/save-cache
       - run:
           command: |
-            env\Scripts\activate
+            env/Scripts/activate
             ./manage.py test
           name: Test
 
