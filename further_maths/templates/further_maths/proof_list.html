@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block sidebar_heading %}{{ sidebar_heading }}{% endblock %}
+{% block sidebar %}
+  <h4>My Site</h4>
+  <ul>
+    {% for proof in object_list %}
+    <li><a href="{% url 'proof-detail' proof.id %}">{{ proof.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <h4>Youtube</h4>
+  <ul>
+    <li><a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
+    <li><a href="https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg">Matholodger</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMXMi3bUMThGdYqos36X_lA">The 3Blue1Brown (Geometry Playlist)</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ">Topology & Geometry</a> - LECTURES - by <a href="https://en.wikipedia.org/wiki/Tadashi_Tokieda">Dr Tadashi Tokieda</a></li>
+  </ul>
+  <h4>Need some Help?</h4>
+  <p>
+    If there is something you want to discuss, my Contact Details are on the <a href="{% url 'home' %}">Home Page</a>.
+  </p>
+{% endblock %}
+
+{% block heading %}{{ heading }}{% endblock %}
+{% block content %}
+  {% autoescape off %}
+  {% for proof in object_list %}
+  <div class="container border mb-2">
+    <h2 class="pt-3 pb-2 mb-3 border-bottom"><a href="{% url 'proof-detail' proof.id %}">{{ proof.title }}</a></h2>
+    {{proof.content}}
+  </div>
+  {% endfor %}
+  {% endautoescape %}
+{% endblock %}
